@@ -14,18 +14,6 @@ class Tarefa {
     this.geolocalizacao,
   );
 
-  String getdescricao() {
-    return nome;
-  }
-
-  DateTime getdata() {
-    return dataHora;
-  }
-
-  String getgeolocalizacao() {
-    return geolocalizacao;
-  }
-
   String concatenaDescricao() {
     return 'Descrição: $nome';
   }
