@@ -1,4 +1,5 @@
 library projeto_tarefa_pk;
+
 import 'package:intl/intl.dart';
 
 class Tarefa {
@@ -25,8 +26,16 @@ class Tarefa {
     return geolocalizacao;
   }
 
+  String concatenaDescricao() {
+    return 'Descrição: $nome';
+  }
+
   String concatenaData() {
-    return 'Data: ' + DateFormat('dd/MM/yyyy HH:mm').format(dataHora);
+    return 'Data: ${DateFormat('dd/MM/yyyy HH:mm').format(dataHora)}';
+  }
+
+  String concatenaGeolocalizacao() {
+    return 'Latitude Longitude \n$geolocalizacao';
   }
 
   static Tarefa fromMap(String id, Map<String, dynamic> map) {
