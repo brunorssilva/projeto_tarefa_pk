@@ -8,7 +8,7 @@ void main() {
       // A - Arrumação
       String descricao = 'Teste1';
       String respostaEsperada = 'Descrição: $descricao';
-      Tarefa tarefa = Tarefa(descricao, DateTime.now(), '');
+      Tarefa tarefa = Tarefa(descricao, DateTime.now(), '', true);
       // A - Ação
       String respostaEncontrada = tarefa.concatenaDescricao();
 
@@ -19,7 +19,7 @@ void main() {
       // A - Arrumação
       String descricao = 'Teste2';
       String respostaEsperada = 'Descrição: $descricao';
-      Tarefa tarefa = Tarefa(descricao, DateTime.now(), '');
+      Tarefa tarefa = Tarefa(descricao, DateTime.now(), '', true);
       // A - Ação
       String respostaEncontrada = tarefa.concatenaDescricao();
 
@@ -36,7 +36,7 @@ void main() {
       DateTime dtHora = DateTime.now();
       String respostaEsperada =
           'Data: ${DateFormat('dd/MM/yyyy HH:mm').format(dtHora)}';
-      Tarefa tarefa = Tarefa('', dtHora, '');
+      Tarefa tarefa = Tarefa('', dtHora, '', true);
       // A - Ação
       String respostaEncontrada = tarefa.concatenaData();
 
@@ -51,7 +51,7 @@ void main() {
       DateTime dtHora = DateTime.parse('2024-06-20 20:46:04Z');
       String respostaEsperada =
           'Data: ${DateFormat('dd/MM/yyyy HH:mm').format(dtHora)}';
-      Tarefa tarefa = Tarefa('', dtHora, '');
+      Tarefa tarefa = Tarefa('', dtHora, '', true);
       // A - Ação
       String respostaEncontrada = tarefa.concatenaData();
 
@@ -67,7 +67,7 @@ void main() {
       // A - Arrumação
       String geolocalizacao = '-23.5079634 -47.4745328';
       String respostaEsperada = 'Latitude Longitude \n$geolocalizacao';
-      Tarefa tarefa = Tarefa('', DateTime.now(), geolocalizacao);
+      Tarefa tarefa = Tarefa('', DateTime.now(), geolocalizacao, true);
       // A - Ação
       String respostaEncontrada = tarefa.concatenaGeolocalizacao();
 
@@ -82,7 +82,7 @@ void main() {
       // A - Arrumação
       String geolocalizacao = '-26.5307451 -47.4662306';
       String respostaEsperada = 'Latitude Longitude \n$geolocalizacao';
-      Tarefa tarefa = Tarefa('', DateTime.now(), geolocalizacao);
+      Tarefa tarefa = Tarefa('', DateTime.now(), geolocalizacao, true);
       // A - Ação
       String respostaEncontrada = tarefa.concatenaGeolocalizacao();
 

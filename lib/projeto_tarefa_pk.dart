@@ -1,5 +1,7 @@
 library projeto_tarefa_pk;
 
+import 'dart:ffi';
+
 import 'package:intl/intl.dart';
 
 class Tarefa {
@@ -7,19 +9,37 @@ class Tarefa {
   String nome;
   DateTime dataHora;
   String geolocalizacao;
+  bool isConcluido;
 
   Tarefa(
     this.nome,
     this.dataHora,
     this.geolocalizacao,
+    this.isConcluido,
   );
+
+  String getdescricao() {
+    return nome;
+  }
+
+  DateTime getdata() {
+    return dataHora;
+  }
+
+  String getgeolocalizacao() {
+    return geolocalizacao;
+  }
+
+  bool getisconcluido() {
+    return isConcluido;
+  }
 
   String concatenaDescricao() {
     return 'Descrição: $nome';
   }
 
   String concatenaData() {
-    return 'Data: ${DateFormat('dd/MM/yyyy HH:mm').format(dataHora)}';
+    return 'Data: ' + DateFormat('dd/MM/yyyy HH:mm').format(dataHora);
   }
 
   String concatenaGeolocalizacao() {
@@ -27,7 +47,7 @@ class Tarefa {
   }
 
   static Tarefa fromMap(String id, Map<String, dynamic> map) {
-    var taref = Tarefa(map['nome'], map['dataHora'], map['geolocalizacao']);
+    var taref = Tarefa(map['nome'], map['dataHora'], map['geolocalizacao'],map['isConcluido']);
     taref.id = id;
     return taref;
   }
