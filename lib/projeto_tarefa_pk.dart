@@ -1,7 +1,5 @@
 library projeto_tarefa_pk;
 
-import 'dart:ffi';
-
 import 'package:intl/intl.dart';
 
 class Tarefa {
@@ -9,7 +7,7 @@ class Tarefa {
   String nome;
   DateTime dataHora;
   String geolocalizacao;
-  bool isConcluido;
+  String isConcluido;
 
   Tarefa(
     this.nome,
@@ -30,7 +28,7 @@ class Tarefa {
     return geolocalizacao;
   }
 
-  bool getisconcluido() {
+  String getisconcluido() {
     return isConcluido;
   }
 
